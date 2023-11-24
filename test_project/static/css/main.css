@@ -1,0 +1,26 @@
+@font-face {
+    font-family: MonseratBold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Monserat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+body {
+    font-family: Monserat;
+}
+
+h1 {
+    font-family: MonseratBold;
+}
+
+
+.icon-card {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
