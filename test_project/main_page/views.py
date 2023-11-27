@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from main_page.models import Slider
 
-# Create your views here.
+
 def index_page(request):
-    return render(request=request, template_name='index.html')
+    images = {'image_list': Slider.objects.all()}
+
+    return render(request=request, template_name='index.html', context=images)
