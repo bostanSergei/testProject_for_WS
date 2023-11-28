@@ -77,8 +77,16 @@ WSGI_APPLICATION = 'test_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # не уверен что получится подгрузить mysql базу в проект, поэтому файл с sqlite3 в корне проекта
+        # dump mysql базы лежит так же в корне этого проекта: файл testWS.sql
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testWS',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
     }
 }
 
